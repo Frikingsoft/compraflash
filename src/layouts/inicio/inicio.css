@@ -1,0 +1,24 @@
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    letter-spacing: 3px;  
+    font-size: 26px; 
+    font-family: 'Open Sans', sans-serif;
+  }
+  .animarFlash{
+   animation: animarFlash .3s;
+  }
+  @keyframes animarFlash{
+    0%{top:-50px;transform:rotate(30deg) scale(1.5)}
+    10%{top:-40px;transform: rotate(30deg) scale(1.5)}
+    20%{top:-30px;transform: rotate(30deg) scale(1.5)}
+    30%{top:-10;transform: rotate(30deg) scale(1.5)}
+    40%{top:0px;transform: rotate(30deg) scale(1.5)}
+    50%{top:20; transform: rotate(30deg) scale(1.5)}
+    60%{top:30; transform: rotate(30deg) scale(1.5)}
+    70%{top:40px;transform: scale(1.5)}
+    80%{top:30px;transform: scale(1.5)}
+    90%{top:20px;transform: scale(1.5)}
+    100%{top:0px;transform: scale(1)}
+  }
