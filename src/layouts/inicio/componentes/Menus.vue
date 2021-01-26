@@ -5,12 +5,12 @@
         <img :src="usuario.foto" class="fotoUsuario">
       </q-avatar>
     </div>
-    <q-list v-for="(item,index) in opcionesUsuario" :key="index" class="text-yellow-11 lista glossy">
-      <q-item clickable v-ripple>
+    <q-list v-for="(item,index) in opcionesUsuario" :key="index" class="text-white lista glossy">
+      <q-item clickable v-ripple v-if="item.estado === login">
         <q-item-section avatar>
-          <q-icon :name="item.icono" color="yellow-11"/>
+          <q-icon :name="item.icono" color="white"/>
         </q-item-section>
-        <q-item-section color="yellow-11">{{item.nombre}}</q-item-section>
+        <q-item-section color="white">{{item.nombre}}</q-item-section>
       </q-item>
     </q-list>
   </div>
@@ -28,14 +28,19 @@ export default {
       get() {
         return this.$store.state.login.usuario;
       },
-    }
+    },
+     login: {
+      get() {
+        return this.$store.state.login.login;
+      },
+    },
   },
 };
 </script>
 <style scoped>
   .lista{
     width: 100%;
-    box-shadow: 0 0 2px yellow;
+    box-shadow: 0 0 2px rgb(255, 255, 255);
   }
   .imagen{
     display: flex;
@@ -43,12 +48,14 @@ export default {
     align-items: center;
     width: 100%;
     height: 200px;
-    box-shadow: 0 0 2px yellow;
+    box-shadow: 0 0 2px rgb(255, 255, 255);
   }
   .fotoUsuario{
-    border: 5px solid rgb(225, 225, 141);
+    border: 5px solid rgb(255, 255, 255);
   }
   .foto{
-    box-shadow: 0 0 15px yellow;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
   }
+ 
+
 </style>

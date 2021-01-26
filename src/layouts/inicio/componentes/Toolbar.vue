@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-toolbar class="glossy text-yellow-11">
+    <q-toolbar class="glossy text-white">
       <q-btn flat dense round icon="menu" aria-label="Menu" @click="abrirMenu = true"/>
       <q-toolbar-title class="titulo">
         Compra <q-icon name="fas fa-bolt" class="animarFlash" /> Flash

@@ -9,7 +9,8 @@
     </q-drawer>
 
     <q-page-container @click="abrirMenu=false" class="flex flex-center">
-      <router-view />
+      <router-view v-if="!login"/>
+      <Login v-if="login"/>
     </q-page-container>
     <Tabs/>
   </q-layout>
@@ -19,15 +20,15 @@
 import Toolbar from './componentes/Toolbar'
 import Menus from './componentes/Menus'
 import Tabs from './componentes/Tabs'
+import Login from './componentes/Login/Login'
 export default {
   name: 'MainLayout',
-  components: {Toolbar,Menus,Tabs},
+  components: {Toolbar,Menus,Tabs,Login},
   data () {
     return {
-      
+     
     }
   },
- 
   computed:{
      abrirMenu:{
             get(){
@@ -36,7 +37,12 @@ export default {
             set(valor){
                 this.$store.commit('login/cerrarMenu',valor)
             }
+        },
+      login:{
+        get(){
+          this.$store.state.login.login
         }
+      }  
   }
 }
 </script>
