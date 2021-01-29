@@ -4,7 +4,10 @@
       <q-card-section>
         <div class="text-h4">{{item.nombre}}</div>
         <div class="text-subtitle2" v-for="(i,indice) in item.articulo" :key="indice"> <span v-if="indice==='precio'">$</span> {{i}}</div>
-        
+         <div class="imagen">
+           <q-img src="https://cdn.quasar.dev/img/chicken-salad.jpg" class="rounded-borders"/>
+         </div>
+         
         <div class="text-h6">{{item.local}}</div>
         <q-rating
         v-model="item.calificacion"

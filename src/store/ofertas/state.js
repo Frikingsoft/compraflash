@@ -15,7 +15,7 @@ export default function () {
         descuento:30,
         foto:"",
         local: "Mata 686",
-        calificacion: 8
+        calificacion: 4
       },
       {
         nombre: "A la Plancha",
@@ -23,7 +23,7 @@ export default function () {
         descuento:30,
         foto:"",
         local: "varela 693",
-        calificacion: 8
+        calificacion: 5
       },
       {
         nombre: "Restobar Manolo",
@@ -31,7 +31,7 @@ export default function () {
         descuento:30,
         foto:"",
         local: "Calle Falsa 123",
-        calificacion: 8
+        calificacion: 9
       },
     
     
