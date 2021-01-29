@@ -1,0 +1,13 @@
+.verOfertas{
+    width: 90%;
+    max-width: 400px;
+    
+}
+.ofertas{
+    height: 200px !important;
+    margin-bottom: 10px;
+    border: 3px double white;
+}
+.ofertas:last-child{
+    margin-bottom: 90px;
+} 

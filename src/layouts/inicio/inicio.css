@@ -6,6 +6,29 @@
     font-size: 26px; 
     font-family: 'Open Sans', sans-serif;
   }
+  .buscar{
+    width: 60%;
+    height: 30px;
+    max-width: 350px;
+    border-radius: 10%/80%;
+    box-shadow: 0 0 5px #ffffff;
+    border: 3px double white;
+    background-image: url('../../../public/imagenes/lupa.png');
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    text-align: center;   
+    background-color: #1976D2; 
+    font-size: 20px;
+      
+  }
+  .buscar:focus{
+    outline:none;
+   
+  }
+  .buscar::placeholder{
+    color:white;
+    font-size: 20px;
+  }
   .animarFlash{
    animation: animarFlash .3s;
   }

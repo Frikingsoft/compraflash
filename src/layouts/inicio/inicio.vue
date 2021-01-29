@@ -8,7 +8,11 @@
       <Menus/>
     </q-drawer>
 
-    <q-page-container @click="abrirMenu=false" class="flex flex-center">
+    <q-page-container @click="abrirMenu=false" class="row justify-center bg-grey-3">
+      <div class="col-12 flex flex-center">
+          <input type="text" placeholder="Buscar..." class="q-mt-md buscar text-white"/>
+      </div>
+    
       <router-view v-if="!login"/>
       <Login v-if="login"/>
     </q-page-container>

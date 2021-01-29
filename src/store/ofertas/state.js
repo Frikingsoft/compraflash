@@ -2,30 +2,38 @@ export default function () {
   return {
     ofertas: [
       {
-        nombre: "chivitería Mariolo",
-        articulo: {nombre:"hamburguesas + Papas Fritas",precio:350},
+        nombre: "Chivitería Mariolo",
+        articulo: {nombre:"Hamburguesas + Papas Fritas",precio:350},
         descuento:30,
-        fotos:[
-          {
-            url:"https://www.futuro.cl/wp-content/uploads/2020/09/dd635a55cce7b7b580f75f7396f57c34-590x340.jpg",
-            nombre:"combo1"  
-          },
-          {
-            url:"https://www.futuro.cl/wp-content/uploads/2020/09/dd635a55cce7b7b580f75f7396f57c34-590x340.jpg",
-            nombre:"combo2"
-          }
-        ],
+        foto:"",
         local: "Rodo 448",
         calificacion: 8
       },
       {
-        nombre: "kaskarufes",
-        articulo: {nombre:"chivito + Papas Fritas",precio:450},
-        descuento:40,
-        fotos:[{url:"https://www.futuro.cl/wp-content/uploads/2020/09/dd635a55cce7b7b580f75f7396f57c34-590x340.jpg"},{url:"https://www.futuro.cl/wp-content/uploads/2020/09/dd635a55cce7b7b580f75f7396f57c34-590x340.jpg"}],
-        local: "akufes 448",
-        calificacion: 9
+        nombre: "Último Recurso",
+        articulo: {nombre:"Panchos + Papas Fritas",precio:200},
+        descuento:30,
+        foto:"",
+        local: "Mata 686",
+        calificacion: 8
       },
+      {
+        nombre: "A la Plancha",
+        articulo: {nombre:"Chivito Familiar",precio:450},
+        descuento:30,
+        foto:"",
+        local: "varela 693",
+        calificacion: 8
+      },
+      {
+        nombre: "Restobar Manolo",
+        articulo: {nombre:"Chivito + Papas Fritas",precio:350},
+        descuento:30,
+        foto:"",
+        local: "Calle Falsa 123",
+        calificacion: 8
+      },
+    
     
     ]
   }
