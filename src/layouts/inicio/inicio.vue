@@ -8,14 +8,14 @@
       <Menus/>
     </q-drawer>
 
-    <q-page-container @click="abrirMenu=false" class="row justify-center bg-grey-3">
+    <q-page-container @click="abrirMenu=false" class="row justify-center bg-grey-3" v-touch-swipe.mouse="cambiarPagina" style="height:90vh">
       <div class="col-12 flex flex-center">
           <input type="text" placeholder="Buscar..." class="q-mt-md buscar text-white"/>
       </div>
     
-      <router-view v-if="!login"/>
-      <Login v-if="login"/>
-      
+      <router-view/>
+   
+    
     </q-page-container>
     <Tabs/>
   </q-layout>
@@ -25,13 +25,15 @@
 import Toolbar from './componentes/Toolbar'
 import Menus from './componentes/Menus'
 import Tabs from './componentes/Tabs'
-import Login from './componentes/Login/Login'
+
 export default {
   name: 'MainLayout',
-  components: {Toolbar,Menus,Tabs,Login},
+  components: {Toolbar,Menus,Tabs},
   data () {
     return {
-     
+     info:null,
+     pagina:0,
+     ruta:''
     }
   },
   computed:{
@@ -45,9 +47,36 @@ export default {
         },
       login:{
         get(){
-          this.$store.state.login.login
+          return this.$store.state.login.login
         }
-      }  
+      },
+    rubros:{
+       get(){
+          return this.$store.state.login.rubros
+        }
+    }
+  },
+  methods:{
+     cambiarPagina ({ evt, ...info }) {
+      this.info = info
+      let ultimaPagina=this.rubros.length  
+            
+      if(this.info.direction==="right"){
+        if(this.pagina>0){
+        this.pagina=this.pagina-=1
+        this.ruta=this.rubros[this.pagina].ruta 
+        this.$router.push(this.ruta)
+        }
+      }
+      if(this.info.direction==="left"){
+          if(this.pagina<ultimaPagina){
+            this.pagina=this.pagina+=1
+            this.ruta=this.rubros[this.pagina].ruta 
+            this.$router.push(this.ruta)
+          }
+      }
+   
+    }
   }
 }
 </script>

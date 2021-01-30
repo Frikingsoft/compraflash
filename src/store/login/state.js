@@ -16,7 +16,7 @@ export default function () {
       {nombre:"Medicina",icono:"local_hospital",ruta:"/medicina"},
       {nombre:"Servicios",icono:"fas fa-comment",ruta:"/servicios"},
       {nombre:"Favoritos",icono:"star",ruta:"/favoritos"},
-      {nombre:"Ferretería",icono:"star",ruta:"/favoritos"}
+      {nombre:"Ferretería",icono:"star",ruta:"/ferreteria"}
     ],
     opcionesUsuario:[
       {nombre:"Perfil",icono:"assignment_ind",estado:true},
