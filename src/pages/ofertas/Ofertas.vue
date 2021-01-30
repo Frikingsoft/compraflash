@@ -1,6 +1,6 @@
 <template>
   <div class="q-mt-md row items-start verOfertas">
-    <q-card class="my-card col-12 bg-primary text-white ofertas" v-for="(item,index) in ofertas" :key="index">
+    <q-card class="my-card col-12 bg-primary text-white ofertas" v-for="(item,index) in ofertas" :key="index" @click="coso(item)">
       <q-card-section>
         <div class="text-h4 fondoTexto">{{item.nombre}}</div>
         <div class="text-weight-bold text-primary flex flex-center bordeTexto" v-for="(i,indice) in item.articulo" :key="indice"> <span v-if="indice==='precio'">$</span> {{i}}</div>
@@ -8,7 +8,7 @@
            <q-img src="https://cdn.quasar.dev/img/chicken-salad.jpg" class="rounded-borders"/>
          </div>
          
-        <div class="text-h6 fondoTexto">{{item.local}}</div>
+        <div class="text-h6 fondoTexto">{{item.local }}</div>
         <q-rating
         v-model="item.calificacion"
         size="2em"
@@ -24,8 +24,8 @@
          <q-card-actions>
         <q-btn @click="pedido=true" flat class="bg-grey-3 text-primary text-weight-bold" style="width:150px">Hacer Pedido</q-btn>
         <q-btn @click="contacto=true" flat class="bg-grey-3 text-primary text-weight-bold" style="width:150px">Contacto</q-btn>
-      <BotonPedido/>
-      <BotonContacto/>
+      <BotonPedido :itemusuario="datosClick"/>
+      <BotonContacto :itemusuario="datosClick"/>
       </q-card-actions>
       </q-card-section>
     </q-card>
@@ -43,10 +43,14 @@ export default {
   },
     data () {
     return {
-     
+     datosClick:""
     }
   },
-   methods: {},
+   methods: {
+     coso(item){
+      this.datosClick=item
+     }
+   },
   computed: {
     ofertas: {
       get() {

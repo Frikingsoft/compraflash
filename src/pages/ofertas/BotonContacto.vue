@@ -3,7 +3,7 @@
     <q-dialog v-model="contacto" persistent>
       <q-card style="min-width: 350px">
         <q-card-section>
-          <div class="text-h6">¿Cual es su Consulta?</div>
+          <div class="text-h6">¿Cual es su Consulta para {{itemusuario.nombre}}</div>
         </q-card-section>
 
         <q-card-section class="q-pt-none">
@@ -31,6 +31,7 @@ export default {
       registroContacto:""
     }
   },
+  props:['itemusuario'],
   computed: {
     contacto: {
       get() {

@@ -7,7 +7,7 @@
         </q-card-section>
 
         <q-card-section class="q-pt-none">
-          ¿Confirma que quiere realizar el pedido?
+          ¿Confirma que quiere realizar el pedido a {{itemusuario.nombre}}?
         </q-card-section>
 
         <q-card-actions align="center">
@@ -21,6 +21,7 @@
 
 <script>
 export default {
+  props:['itemusuario'],
   computed: {
     pedido: {
       get() {
