@@ -2,6 +2,8 @@ export default function () {
   return {
     abrirMenu:false,
     login:true,
+    contacto:false,
+    pedido:false,
     nocturno:false,
     usuario:{
       nombre:"",

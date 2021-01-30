@@ -5,7 +5,7 @@
         <img :src="usuario.foto" class="fotoUsuario">
       </q-avatar>
     </div>
-    <q-list v-for="(item,index) in opcionesUsuario" :key="index" class="text-white lista glossy">
+    <q-list v-for="(item,index) in opcionesUsuario" :key="index" class="text-white text-weight-bold lista glossy">
       <q-item clickable v-ripple v-if="item.estado === login">
         <q-item-section avatar>
           <q-icon :name="item.icono" color="white"/>
@@ -34,6 +34,7 @@ export default {
         return this.$store.state.login.login;
       },
     },
+    
   },
 };
 </script>
