@@ -1,6 +1,6 @@
 <template>
   <div class="q-mt-md row items-start verOfertas">
-    <q-card class="my-card col-12 bg-primary text-white ofertas" v-for="(item,index) in ofertas" :key="index" @click="coso(item)">
+    <q-card class="my-card col-12 bg-primary text-white ofertas" v-for="(item,index) in ofertas" :key="index" @click="seleccionar(item)" >
       <q-card-section>
         <div class="text-h4 fondoTexto">{{item.nombre}}</div>
         <div class="text-weight-bold text-primary flex flex-center bordeTexto" v-for="(i,indice) in item.articulo" :key="indice"> <span v-if="indice==='precio'">$</span> {{i}}</div>
@@ -47,9 +47,10 @@ export default {
     }
   },
    methods: {
-     coso(item){
+     seleccionar(item){
       this.datosClick=item
      }
+   
    },
   computed: {
     ofertas: {
